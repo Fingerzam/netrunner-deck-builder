@@ -11,12 +11,24 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130829184531) do
+ActiveRecord::Schema.define(:version => 20130829200620) do
 
   create_table "card_sets", :force => true do |t|
     t.string   "name"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "cards", :force => true do |t|
+    t.string   "name"
+    t.string   "card_type"
+    t.string   "subtype"
+    t.string   "side"
+    t.string   "faction"
+    t.integer  "influence_cost"
+    t.integer  "card_set_id"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
   end
 
 end

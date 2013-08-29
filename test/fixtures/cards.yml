@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  card_type: MyString
+  subtype: MyString
+  side: MyString
+  faction: MyString
+  influence_cost: 1
+  card_set_id: 1
+
+two:
+  name: MyString
+  card_type: MyString
+  subtype: MyString
+  side: MyString
+  faction: MyString
+  influence_cost: 1
+  card_set_id: 1

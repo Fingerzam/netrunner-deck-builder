@@ -1,4 +1,7 @@
 Netrunner::Application.routes.draw do
+  resources :cards
+
+
   resources :card_sets
 
 
