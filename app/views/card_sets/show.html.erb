@@ -1,10 +1,14 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Name:</b>
-  <%= @card_set.name %>
+  <h2><%= @card_set.name %></h2>
 </p>
 
+<p>
+  <b>Cards:</b>
+  <%= render partial: "shared/card_listing",
+             locals: { cards: @card_set.cards } %>
+</p>
 
 <%= link_to 'Edit', edit_card_set_path(@card_set) %> |
 <%= link_to 'Back', card_sets_path %>

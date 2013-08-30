@@ -11,6 +11,9 @@ cc = CardSet.create name: "Creation and Control"
 
 core.cards.create name: "Stimhack", card_type: "Event", subtype: "Run",
                   side: "Runner", faction: "Anarch", influence_cost: 1
+core.cards.create name: "The Personal Touch", card_type: "Hardware",
+                  subtype: "Mod", side: "Runner", faction: "Shaper",
+                  influence_cost: 2
 
 cc.cards.create name: "Thomas Haas", card_type: "Asset", subtype: "Executive",
                 side: "Corporation", faction: "Haas-Bioroid", influence_cost: 1
