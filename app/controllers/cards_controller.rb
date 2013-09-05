@@ -1,4 +1,6 @@
 class CardsController < ApplicationController
+  before_filter :authenticate, only: [:new, :create, :destroy]
+
   # GET /cards
   # GET /cards.json
   def index
@@ -25,6 +27,7 @@ class CardsController < ApplicationController
   # GET /cards/new.json
   def new
     @card = Card.new
+    @card_sets = CardSet.all
 
     respond_to do |format|
       format.html # new.html.erb
@@ -78,6 +81,14 @@ class CardsController < ApplicationController
     respond_to do |format|
       format.html { redirect_to cards_url }
       format.json { head :no_content }
+    end
+  end
+
+  private
+
+  def authenticate
+    authenticate_or_request_with_http_basic do |username, password|
+      username == "admin" and password == "adminpwd"
     end
   end
 end

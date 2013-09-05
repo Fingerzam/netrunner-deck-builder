@@ -29,7 +29,7 @@
   </div>
   <div class="field">
     <%= f.label :faction %><br />
-    <%= f.text_field :faction %>
+    <%= f.select :faction, Card.faction.options %>
   </div>
   <div class="field">
     <%= f.label :influence_cost %><br />
@@ -37,7 +37,8 @@
   </div>
   <div class="field">
     <%= f.label :card_set_id %><br />
-    <%= f.number_field :card_set_id %>
+    <%= f.select :card_set_id,
+                 options_from_collection_for_select(@card_sets, :id, :name) %>
   </div>
   <div class="actions">
     <%= f.submit %>
